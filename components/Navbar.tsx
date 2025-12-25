@@ -14,7 +14,6 @@ export default function Navbar() {
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="group flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-sage-700 flex items-center justify-center">
-                <span className="text-white text-lg font-medium">S</span>
               </div>
               <div className="flex flex-col">
                 <span className="text-xl font-medium tracking-[0.2em] text-sage-800 group-hover:text-sage-600 transition-colors">

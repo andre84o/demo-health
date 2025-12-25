@@ -35,7 +35,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="/services"
-                className="inline-block px-10 py-4 bg-gold text-sage-900 text-sm font-medium tracking-wider uppercase hover:bg-gold-light transition-all duration-300 text-center"
+                className="inline-block px-10 py-4 bg-gold text-white border text-sm font-medium tracking-wider uppercase hover:bg-gold-light transition-all duration-300 text-center"
               >
                 Utforska tjänster
               </Link>
