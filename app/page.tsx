@@ -218,7 +218,7 @@ export default function Home() {
           <div className="text-center mt-12">
             <Link
               href="/services"
-              className="inline-block px-10 py-4 bg-sage-600 text-white text-sm font-medium tracking-wider uppercase hover:bg-sage-700 transition-all duration-300"
+              className="inline-block px-10 py-4 bg-sage-600 text-black border text-sm font-medium tracking-wider uppercase hover:bg-sage-700 transition-all duration-300"
             >
               Se alla tjänster
             </Link>
