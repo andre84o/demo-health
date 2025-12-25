@@ -337,7 +337,9 @@ export default function Home() {
             Boka en kostnadsfri konsultation och låt oss tillsammans skapa en
             plan för din optimala hälsa och välbefinnande.
           </p>
-          <BookingModal />
+          <div className="max-h-[50vh] overflow-auto inline-block">
+            <BookingModal />
+          </div>
         </div>
       </section>
 

@@ -65,8 +65,8 @@ export default function BookingModal({
       </button>
 
       {isModalOpen && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-in fade-in duration-200">
-          <div className="bg-white rounded-sm shadow-2xl max-w-2xl w-full overflow-hidden relative animate-in zoom-in-95 duration-200 mt-[35%]">
+        <div className="fixed inset-0 z-[100] flex items-start justify-center overflow-y-auto p-4 py-8 bg-black/50 backdrop-blur-sm animate-in fade-in duration-200">
+          <div className="bg-white rounded-sm shadow-2xl max-w-2xl w-full overflow-hidden relative animate-in zoom-in-95 duration-200 my-auto">
             <button 
               onClick={reset}
               className="absolute top-4 right-4 text-sage-400 hover:text-sage-600 transition-colors"

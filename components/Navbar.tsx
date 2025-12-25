@@ -10,13 +10,14 @@ export default function Navbar() {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
 
   return (
-    <nav className="bg-cream/95 backdrop-blur-md sticky top-0 z-50 border-b border-gold/20">
+    <>
       <BookingModal 
         isOpen={isBookingOpen} 
         onClose={() => setIsBookingOpen(false)} 
         className="hidden" 
       />
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+      <nav className="bg-cream/95 backdrop-blur-md sticky top-0 z-50 border-b border-gold/20">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="flex justify-between h-20 items-center">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
@@ -62,10 +63,12 @@ export default function Navbar() {
               Om oss
               <span className="absolute -bottom-1 left-0 w-0 h-px bg-gold group-hover:w-full transition-all duration-300"></span>
             </Link>
-            <BookingModal 
-              text="Boka tid"
+            <button
+              onClick={() => setIsBookingOpen(true)}
               className="ml-4 px-4 py-2.5 bg-sage-600 border border-sage-600 text-sm text-white font-medium tracking-wider uppercase hover:bg-sage-700 transition-all duration-300 rounded-sm"
-            />
+            >
+              Boka tid
+            </button>
           </div>
 
           {/* Mobile menu button */}
@@ -123,5 +126,6 @@ export default function Navbar() {
         )}
       </div>
     </nav>
+    </>
   );
 }
