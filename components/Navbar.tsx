@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
+import BookingModal from './BookingModal';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -55,12 +56,10 @@ export default function Navbar() {
               Om oss
               <span className="absolute -bottom-1 left-0 w-0 h-px bg-gold group-hover:w-full transition-all duration-300"></span>
             </Link>
-            <Link
-              href="/about"
-              className="ml-4 px-4 py-2.5 bg-sage-600 border text-sm text-black font-medium tracking-wider uppercase hover:bg-sage-700 transition-all duration-300 rounded-sm"
-            >
-              Boka tid
-            </Link>
+            <BookingModal 
+              text="Boka tid"
+              className="ml-4 px-4 py-2.5 bg-sage-600 border border-sage-600 text-sm text-white font-medium tracking-wider uppercase hover:bg-sage-700 transition-all duration-300 rounded-sm"
+            />
           </div>
 
           {/* Mobile menu button */}
