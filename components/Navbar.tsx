@@ -7,9 +7,15 @@ import BookingModal from './BookingModal';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isBookingOpen, setIsBookingOpen] = useState(false);
 
   return (
     <nav className="bg-cream/95 backdrop-blur-md sticky top-0 z-50 border-b border-gold/20">
+      <BookingModal 
+        isOpen={isBookingOpen} 
+        onClose={() => setIsBookingOpen(false)} 
+        className="hidden" 
+      />
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="flex justify-between h-20 items-center">
           {/* Logo */}
@@ -103,13 +109,15 @@ export default function Navbar() {
               >
                 Om oss
               </Link>
-              <Link
-                href="/about"
-                className="mt-2 px-6 py-3 bg-sage-600 text-white text-sm font-medium tracking-wider uppercase text-center rounded-sm"
-                onClick={() => setIsMenuOpen(false)}
+              <button
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  setIsBookingOpen(true);
+                }}
+                className="mt-2 px-6 py-3 bg-sage-600 text-white text-sm font-medium tracking-wider uppercase text-center rounded-sm w-full"
               >
                 Boka tid
-              </Link>
+              </button>
             </div>
           </div>
         )}

@@ -4,12 +4,18 @@ import { useState } from 'react';
 
 export default function BookingModal({ 
   className = "inline-block px-12 py-5 bg-sage-600 text-white text-sm font-medium tracking-wider uppercase hover:bg-sage-700 transition-all duration-300 cursor-pointer",
-  text = "Boka konsultation"
+  text = "Boka konsultation",
+  onOpen,
+  isOpen: controlledIsOpen,
+  onClose: controlledOnClose
 }: { 
   className?: string;
   text?: string;
+  onOpen?: () => void;
+  isOpen?: boolean;
+  onClose?: () => void;
 }) {
-  const [isOpen, setIsOpen] = useState(false);
+  const [internalIsOpen, setInternalIsOpen] = useState(false);
   const [selectedDate, setSelectedDate] = useState<number | null>(null);
   const [selectedTime, setSelectedTime] = useState<string | null>(null);
   const [step, setStep] = useState(1);
@@ -27,24 +33,38 @@ export default function BookingModal({
   const handleBook = () => {
     setStep(3);
   };
+  
+  const isModalOpen = controlledIsOpen !== undefined ? controlledIsOpen : internalIsOpen;
+  
+  const handleOpen = () => {
+    if (onOpen) onOpen();
+    if (controlledIsOpen === undefined) setInternalIsOpen(true);
+  };
+
+  const handleClose = () => {
+    if (controlledOnClose) controlledOnClose();
+    if (controlledIsOpen === undefined) {
+      setInternalIsOpen(false);
+      setStep(1);
+      setSelectedDate(null);
+      setSelectedTime(null);
+    }
+  };
 
   const reset = () => {
-    setIsOpen(false);
-    setStep(1);
-    setSelectedDate(null);
-    setSelectedTime(null);
+    handleClose();
   }
 
   return (
     <>
       <button
-        onClick={() => setIsOpen(true)}
+        onClick={handleOpen}
         className={className}
       >
         {text}
       </button>
 
-      {isOpen && (
+      {isModalOpen && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-in fade-in duration-200">
           <div className="bg-white rounded-sm shadow-2xl max-w-2xl w-full overflow-hidden relative animate-in zoom-in-95 duration-200 mt-[35%]">
             <button 

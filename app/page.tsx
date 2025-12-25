@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import BookingModal from "../components/BookingModal";
 
 export default function Home() {
   return (
@@ -336,12 +337,7 @@ export default function Home() {
             Boka en kostnadsfri konsultation och låt oss tillsammans skapa en
             plan för din optimala hälsa och välbefinnande.
           </p>
-          <Link
-            href="/about"
-            className="inline-block px-12 py-5 bg-sage-600 text-black text-sm font-medium tracking-wider uppercase hover:bg-sage-700 transition-all duration-300"
-          >
-            Boka konsultation
-          </Link>
+          <BookingModal />
         </div>
       </section>
 
