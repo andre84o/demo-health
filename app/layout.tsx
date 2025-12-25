@@ -16,6 +16,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Serenity Health Center | Holistisk Hälsa & Välbefinnande",
   description: "Ett exklusivt health center där vi kombinerar traditionell visdom med modern vetenskap för att skapa varaktig balans i ditt liv.",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
