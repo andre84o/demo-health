@@ -1,8 +1,31 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Lugnande & Lyxiga färger */
+  --sage-50: #f6f7f5;
+  --sage-100: #e8ebe5;
+  --sage-200: #d4dace;
+  --sage-300: #b5c0aa;
+  --sage-400: #94a383;
+  --sage-500: #768966;
+  --sage-600: #5c6d50;
+  --sage-700: #4a5841;
+  --sage-800: #3d4837;
+  --sage-900: #343d30;
+
+  --rose-50: #fdf8f6;
+  --rose-100: #f9ede8;
+  --rose-200: #f4dcd3;
+  --rose-300: #e8c4b5;
+  --rose-400: #d9a590;
+  --rose-500: #c7876d;
+
+  --cream: #faf8f5;
+  --gold: #c9a962;
+  --gold-light: #ddc78e;
+
+  --background: #faf8f5;
+  --foreground: #3d4837;
 }
 
 @theme inline {
@@ -10,17 +33,76 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Custom colors for Tailwind */
+  --color-sage-50: var(--sage-50);
+  --color-sage-100: var(--sage-100);
+  --color-sage-200: var(--sage-200);
+  --color-sage-300: var(--sage-300);
+  --color-sage-400: var(--sage-400);
+  --color-sage-500: var(--sage-500);
+  --color-sage-600: var(--sage-600);
+  --color-sage-700: var(--sage-700);
+  --color-sage-800: var(--sage-800);
+  --color-sage-900: var(--sage-900);
+
+  --color-rose-50: var(--rose-50);
+  --color-rose-100: var(--rose-100);
+  --color-rose-200: var(--rose-200);
+  --color-rose-300: var(--rose-300);
+  --color-rose-400: var(--rose-400);
+  --color-rose-500: var(--rose-500);
+
+  --color-cream: var(--cream);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom selection color */
+::selection {
+  background-color: var(--sage-200);
+  color: var(--sage-900);
+}
+
+/* Elegant image hover effect */
+.image-hover {
+  transition: transform 0.7s ease, filter 0.7s ease;
+}
+
+.image-hover:hover {
+  transform: scale(1.03);
+  filter: brightness(1.05);
+}
+
+/* Gold gradient text */
+.text-gradient-gold {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Luxury card style */
+.luxury-card {
+  background: linear-gradient(145deg, rgba(255,255,255,0.9) 0%, rgba(250,248,245,0.95) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(201, 169, 98, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Divider line with gradient */
+.divider-gold {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, var(--gold) 50%, transparent 100%);
 }
