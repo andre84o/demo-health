@@ -123,7 +123,7 @@ export default function Services() {
             <span className="block">ditt välbefinnande</span>
           </h1>
           <div className="w-20 h-px bg-gold mx-auto mb-8"></div>
-          <p className="text-xl text-sage-100/90 font-light max-w-2xl mx-auto">
+          <p className="text-xl text-white font-light max-w-2xl mx-auto">
             Vi erbjuder ett helhetsgrepp kring din hälsa med fokus på
             både kropp och själ.
           </p>
@@ -173,7 +173,7 @@ export default function Services() {
               <h3 className="text-3xl font-semibold text-white mb-4">
                 "Hälsa är inte bara frånvaro av sjukdom, det är fullständig harmoni."
               </h3>
-              <p className="text-white/80 text-sm tracking-wider uppercase font-medium">— Vår filosofi</p>
+              <p className="text-white text-sm tracking-wider uppercase font-medium">— Vår filosofi</p>
             </div>
           </div>
         </div>
@@ -196,7 +196,7 @@ export default function Services() {
                 key={index}
                 className={`relative p-10 rounded-sm transition-all duration-300 ${
                   pkg.highlighted
-                    ? 'bg-sage-800 text-white scale-105 shadow-2xl'
+                    ? 'bg-white border-2 border-gold scale-105 shadow-2xl'
                     : 'bg-white border border-sage-100 hover:shadow-lg'
                 }`}
               >
@@ -209,10 +209,10 @@ export default function Services() {
                 )}
 
                 <div className="text-center mb-8">
-                  <h3 className={`text-2xl font-light mb-2 ${pkg.highlighted ? 'text-white' : 'text-sage-800'}`}>
+                  <h3 className="text-2xl font-light mb-2 text-sage-800">
                     {pkg.name}
                   </h3>
-                  <p className={`text-sm mb-4 ${pkg.highlighted ? 'text-sage-300' : 'text-sage-500'}`}>
+                  <p className="text-sm mb-4 text-sage-500">
                     {pkg.description}
                   </p>
                   <div className={`text-4xl font-light ${pkg.highlighted ? 'text-gold' : 'text-sage-800'}`}>
@@ -231,7 +231,7 @@ export default function Services() {
                       >
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
-                      <span className={`text-sm ${pkg.highlighted ? 'text-sage-200' : 'text-sage-600'}`}>
+                      <span className="text-sm text-sage-600">
                         {feature}
                       </span>
                     </li>
