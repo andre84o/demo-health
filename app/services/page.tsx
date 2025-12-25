@@ -117,7 +117,7 @@ export default function Services() {
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-12 text-center">
-          <span className="text-gold text-sm tracking-[0.3em] uppercase">Våra tjänster</span>
+          <span className="text-white text-md font-bold tracking-[0.3em] uppercase">Våra tjänster</span>
           <h1 className="text-5xl md:text-6xl font-light text-white mt-4 mb-6 leading-tight">
             Skräddarsydd vård för
             <span className="block">ditt välbefinnande</span>
@@ -202,7 +202,7 @@ export default function Services() {
               >
                 {pkg.highlighted && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                    <span className="bg-gold text-sage-900 text-xs font-medium px-4 py-1 tracking-wider uppercase">
+                    <span className="bg-gold text-sage-900 text-xs font-medium px-4 py-1 tracking-wider uppercase z-50">
                       Populärast
                     </span>
                   </div>
@@ -240,7 +240,7 @@ export default function Services() {
 
                 <Link
                   href="/about"
-                  className={`block w-full py-4 text-center text-sm font-medium tracking-wider uppercase transition-all duration-300 ${
+                  className={`block w-full py-4 text-center border text-sm font-medium tracking-wider uppercase transition-all duration-300 ${
                     pkg.highlighted
                       ? 'bg-gold text-sage-900 hover:bg-gold-light'
                       : 'border border-sage-300 text-sage-700 hover:bg-sage-800 hover:text-white hover:border-sage-800'
