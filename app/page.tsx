@@ -236,7 +236,7 @@ export default function Home() {
           <svg className="w-12 h-12 text-gold/40 mx-auto mb-8" fill="currentColor" viewBox="0 0 24 24">
             <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
           </svg>
-          <p className="text-2xl md:text-3xl font-light text-white leading-relaxed mb-8">
+          <p className="text-2xl md:text-3xl font-light text-black leading-relaxed mb-8">
             "Att ta hand om sin hälsa är den största investeringen man kan göra.
             Hos Serenity hittade jag verktygen för att verkligen förändra mitt liv."
           </p>
@@ -261,7 +261,7 @@ export default function Home() {
           </p>
           <Link
             href="/about"
-            className="inline-block px-12 py-5 bg-sage-600 text-white text-sm font-medium tracking-wider uppercase hover:bg-sage-700 transition-all duration-300"
+            className="inline-block px-12 py-5 bg-sage-600 text-black text-sm font-medium tracking-wider uppercase hover:bg-sage-700 transition-all duration-300"
           >
             Boka konsultation
           </Link>
@@ -274,11 +274,15 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
             <div className="md:col-span-2">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-full bg-sage-600 flex items-center justify-center">
-                  <span className="text-white text-lg font-semibold">S</span>
-                </div>
+                <Image
+                  src="/logo.png"
+                  alt="Serenity Health Center"
+                  width={60}
+                  height={60}
+                  className="object-contain"
+                />
                 <div className="flex flex-col">
-                  <span className="text-xl font-semibold tracking-[0.2em] text-white">
+                  <span className="text-xl font-semibold tracking-[0.2em] text-black">
                     SERENITY
                   </span>
                   <span className="text-[10px] tracking-[0.3em] text-gold uppercase font-medium">
@@ -293,7 +297,7 @@ export default function Home() {
             </div>
 
             <div>
-              <h4 className="text-white font-medium mb-4 tracking-wide">Snabblänkar</h4>
+              <h4 className="text-black font-medium mb-4 tracking-wide">Snabblänkar</h4>
               <ul className="space-y-3">
                 <li><Link href="/" className="text-sage-400 hover:text-gold text-sm transition-colors">Hem</Link></li>
                 <li><Link href="/services" className="text-sage-400 hover:text-gold text-sm transition-colors">Tjänster</Link></li>
@@ -302,7 +306,7 @@ export default function Home() {
             </div>
 
             <div>
-              <h4 className="text-white font-medium mb-4 tracking-wide">Kontakt</h4>
+              <h4 className="text-black font-medium mb-4 tracking-wide">Kontakt</h4>
               <ul className="space-y-3 text-sage-400 text-sm">
                 <li>Lugna Gatan 123</li>
                 <li>123 45 Stockholm</li>

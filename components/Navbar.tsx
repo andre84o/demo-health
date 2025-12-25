@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 
 export default function Navbar() {
@@ -13,8 +14,13 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="group flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-sage-700 flex items-center justify-center">
-              </div>
+              <Image
+                src="/logo.png"
+                alt="Serenity Health Center"
+                width={60}
+                height={60}
+                className="object-contain"
+              />
               <div className="flex flex-col">
                 <span className="text-xl font-medium tracking-[0.2em] text-sage-800 group-hover:text-sage-600 transition-colors">
                   SERENITY
